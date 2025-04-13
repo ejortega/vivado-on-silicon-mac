@@ -124,10 +124,10 @@ fi
 start_docker
 
 # Attempt to enable Rosetta and set swap to at least 2GiB in Docker
-eval "$script_dir/configure_docker.sh"
+"$script_dir/configure_docker.sh"
 
 # Generate the Docker image
-if ! eval "$script_dir/gen_image.sh"
+if ! "$script_dir/gen_image.sh"
 then
 	exit 1
 fi
